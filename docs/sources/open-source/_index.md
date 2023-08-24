@@ -203,6 +203,14 @@ The benefits of connecting to Grafana Cloud include:
 
 To connect to Grafana Cloud, refer to the **Cloud** page in your OSS Grafana OnCall instance.
 
+### Note Regarding Grafana Cloud Instances in Different Regions
+
+By default, when you create a Grafana Stack on Grafana Cloud, it is provisioned in the us-central-1 region. Consequently, the Grafana OnCall engine is configured to communicate with Grafana Cloud using this URL.
+
+You might have observed that on the Grafana OnCall Cloud page, under the Cloud section, there is an API URL that varies depending on the region you select for setting up the Cloud Stack.
+
+This API URL needs to be applied in your engine deployment using the environment variable GRAFANA_CLOUD_ONCALL_API_URL (it must be complete, e.g., https://oncall-prod-eu-west-0.grafana.net/oncall).
+
 ## Supported Phone Providers
 
 ### Twilio
